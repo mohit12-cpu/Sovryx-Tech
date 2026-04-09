@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-primary: #181CB8;
+  --color-accent: #FF5700;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans;
+  }
+}
+
+.sticky-nav {
+  @apply sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-accent text-white font-semibold rounded-lg transition-all hover:bg-orange-600 active:scale-95;
+}
+
+.btn-outline {
+  @apply px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg transition-all hover:bg-primary hover:text-white active:scale-95;
+}
